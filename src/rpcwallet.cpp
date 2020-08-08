@@ -72,7 +72,7 @@ Value getinfo(const Array& params, bool fHelp)
 
     Object obj;
     obj.push_back(Pair("version",       FormatFullVersion()));
-    obj.push_back(Pair("subversion",    strSubVersion));
+    obj.push_back(Pair("subversion",    FormatSubVersion));
     obj.push_back(Pair("protocolversion",(int)PROTOCOL_VERSION));
     obj.push_back(Pair("walletversion", pwalletMain->GetVersion()));
     obj.push_back(Pair("balance",       ValueFromAmount(pwalletMain->GetBalance())));
